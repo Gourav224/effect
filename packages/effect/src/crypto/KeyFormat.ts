@@ -77,6 +77,34 @@ export type Role = "public" | "private" | "secret"
 export type Direction = "decode" | "encode"
 
 /**
+ * A JSON Web Key (RFC 7517) accepted and returned by Web Crypto.
+ *
+ * @stability unstable
+ * @category models
+ * @since 4.1.0
+ */
+export interface JsonWebKey {
+  alg?: string
+  crv?: string
+  d?: string
+  dp?: string
+  dq?: string
+  e?: string
+  ext?: boolean
+  k?: string
+  key_ops?: Array<string>
+  kty?: string
+  n?: string
+  oth?: Array<{ d?: string; r?: string; t?: string }>
+  p?: string
+  q?: string
+  qi?: string
+  use?: string
+  x?: string
+  y?: string
+}
+
+/**
  * A key format, such as {@link spki} or `pem(pkcs8)`.
  *
  * **Details**
